@@ -1,0 +1,998 @@
+/*
+Couples Resort Responsive Build
+12 column grid as per XD file
+Some design elements & functionality has not been included to keep build simple for level 2
+Fucntionality can be added in other classes
+ */
+
+/* 
+    CSS Guide 
+
+    1.  General Styles
+    2.  Main Nav
+    3.  Main Hero Image
+    4.  Main Hero Image Contact
+    5.  Why Couples Resort
+    6.  About & FAQ
+    7.  Contact Form
+    8.  Footer
+    9.  Custom Queries
+    10. Tablet Queries
+    11. Desktop Queries 
+ */
+
+
+ /* 1. ---General Styles--- */
+
+body {
+   color: #626262;
+   font-family: 'Sanchez', 'Times New Roman', serif;
+}
+
+a {
+   text-decoration: none;
+   transition: all .5s ease-in-out;
+}
+
+input, textarea {
+   display: block;
+   margin: 0;
+   padding: 0;
+}
+
+.cr-red {
+   color: #9a2018;
+}
+
+/* 2. ---Main Nav--- */
+
+#main-nav button {
+	background: url(../images/burger.svg) center no-repeat;
+	border: 0px;
+	width: 20px;
+	height: 20px;
+	transition: all .5s ease;
+   margin-top: 15px;
+   margin-bottom: 20px;
+}
+
+#main-nav button.expanded {
+	transform: rotate(90deg);
+}
+
+#burger-con {
+	margin-top: 20px;
+	display: none;
+   margin-bottom: 20px;
+}
+
+#burger-con.slide-toggle {
+	display: block;
+}
+
+#main-nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+#main-nav li a {
+	display: block;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	color: #626262;
+}
+
+#main-nav li {
+	border-bottom: 1px solid #efefef;
+}
+
+#main-nav li:first-child {
+	border-top: 1px solid #efefef;
+}
+
+#main-nav li:last-child {
+	margin-bottom: 10px;
+}
+
+#main-nav li a:hover {
+	color: #9a2018;
+}
+
+/* this will appear at desktop */
+#book-now-header {
+   display: none;
+   margin-right: -16px;
+}
+
+#logo {
+   margin-bottom: 20px;
+   max-width: 288px;
+}
+
+
+/* 3. ---Main Hero Image--- */
+
+.book-now {
+   background-color: #9a2018;
+   color: #fff;
+   font-size: 16px;
+   transition: background-color 500ms linear;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-style: italic;
+   transition:all 0.3s ease;
+   cursor: pointer;
+}
+
+.book-now:hover {
+   box-shadow: inset 0px -120px 0px 0px rgb(196, 28, 28);
+}
+
+#book-now-hero {
+   height: 67px;
+}
+
+/* I export the image at tablet size for use at mobile up to tablet 
+I also use the feature in XD to export at 2x as well*/
+
+#hero {
+   background-image: url(../images/hero-main-mt.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+}
+
+/*image switching for retina screens*/
+
+@media screen and (min-resolution: 200dpi),
+		 screen and (min-resolution: 1.25dppx) {
+	#hero {
+		background-image: url(../images/hero-main-mt@2x.jpg);
+	}		
+}
+
+#hero .grid-con {
+   height: 220px;
+}
+
+#hero-heading-box {
+   align-self: end;
+}
+
+.hero-img-h2, .hero-img-h3 {
+   background: rgb(255, 255, 255);
+   padding: 10px 15px;
+   font-size: 14px;
+}
+
+.hero-img-h2 span,  .hero-img-h3 span {
+   color: #9a2018;
+   font-size: 12px;
+}
+
+#booking-calendar {
+   display: none;
+}
+
+.line-seperator {
+   margin-top: 20px;
+   border-top: solid 3px #CF6666;
+   padding-top: 20px;
+}
+
+#hero-summary p {
+   font-size: 14px;
+   line-height: 22px;
+   margin-bottom: 20px;
+}
+
+/* 4. ---Main Hero Image Contact--- */
+
+.fas {
+   font-size: 50px;
+   color: #9a2018;
+   margin: 0 auto;
+   float: left;
+}
+
+.fa-mobile-alt {
+   margin-right: 20px;
+   margin-left: 3px;
+   margin-bottom: 20px;
+}
+
+.fa-map-marker-alt {
+   margin-right: 15px;
+}
+
+#contact {
+   font-size: 12px;
+   background-color: #efefef;
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+#contact .grid-con > div {
+   width: 240px;
+   margin: 0 auto;
+}
+
+/* 5. ---Why Chose Us--- */
+
+#why-choose-us-nav {
+   padding-top: 20px;
+}
+
+#why-choose-us-nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#why-choose-us-nav ul li {
+   margin-bottom: 15px;
+}
+
+#why-choose-us-nav ul li a {
+  color: inherit;
+  padding: 5px;
+}
+
+#why-choose-us-nav ul li a.selected {
+   border-left: #9a2018 solid 5px;
+ }
+
+
+#why-choose-us-hero {
+   background-image: url(../images/why-choose-us-hero-mt.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+   background-position: center;
+}
+
+/*image switching for retina screens*/
+
+@media screen and (min-resolution: 200dpi),
+		 screen and (min-resolution: 1.25dppx) {
+   #why-choose-us-hero {
+		background-image: url(../images/why-choose-us-hero-mt@2x.jpg);
+	}		
+}
+
+#why-choose-us-hero .grid-con {
+   height: 195px;
+}
+
+#why-choose-us-heading-box {
+   align-self: end;
+}
+
+.why-choose-us-image {
+   float: left;
+   margin-right: 20px;
+   margin-top: 30px;
+}
+
+.why-choose-us-image span{
+   display: none;
+}
+
+
+.why-choose-us-image-con h2 {
+   font-size: 14px;
+   margin-bottom: 20px;
+   margin-top: 30px;
+}
+
+.why-choose-us-image-con p {
+   font-size: 12px;
+   margin-bottom: 20px;
+   line-height: 20px;
+}
+
+.why-choose-us-image-con a {
+   color: #707070;
+   font-size: 12px;
+}
+
+.show-hide {
+   display: none;
+}
+
+#why-choose-us-bottom-nav {
+   background-color: #CF6666;
+   padding: 10px;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+#why-choose-us-bottom-nav ol {
+   list-style-type: none;
+   margin: 0 0 0 20px;
+   padding: 0;
+}
+
+#why-choose-us-bottom-nav ol li {
+   display: inline;
+}
+
+#why-choose-us-bottom-nav ol li a {
+   padding: 5px;
+   color: #fff;
+}
+
+/* 6. ---About & FAQ--- */
+
+#about-hero {
+   background-color: #efefef;
+}
+
+#about-hero .grid-con {
+   height: 195px;
+}
+
+#about-hero-heading-box {
+   align-self: end;
+}
+
+#about-hero {
+   background-image: url(../images/about-us-hero-mt.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+   background-position: right;
+}
+
+/*image switching for retina screens*/
+
+@media screen and (min-resolution: 200dpi),
+		 screen and (min-resolution: 1.25dppx) {
+    #about-hero {
+		background-image: url(../images/about-us-hero-mt@2x.jpg);
+	}		
+}
+
+#about-us-text {
+   padding-bottom: 60px;
+}
+
+#about-us-text p {
+   font-size: 14px;
+   margin-bottom: 20px;
+   line-height: 22px;
+}
+
+#about-us-text-column2 {
+   font-style: italic;
+}
+
+#faq-con {
+   background-color: #f4f4f4;
+   padding-top: 35px;
+   padding-bottom: 30px;
+}
+
+.faq h2 {
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.faq h2 span {
+   color: #9a2018;
+   font-size: 16px;
+}
+
+.faq-items {
+   margin-bottom: 16px;
+}
+
+.faq-items h3 {
+   background: #e8e7e7;
+   padding: 16px;
+   font-size: 16px;
+}
+
+.faq-items ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+.faq-items li {
+   padding: 8px 0;
+   border-bottom: 1px solid #9a2018;
+}   
+
+.faq-items a {
+   color: inherit;
+   font-size: 13px;
+}
+
+#faq-text-con {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+/* 7. ---Contact--- */
+
+#contact-hero {
+   background-image: url(../images/contact-hero-mt.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+   background-position: center;
+}
+
+/*image switching for retina screens*/
+
+@media screen and (min-resolution: 200dpi),
+		screen and (min-resolution: 1.25dppx) {
+   #contact-hero {
+		background-image: url(../images/contact-hero-mt@2x.jpg);
+	}		
+}
+
+#contact-hero .grid-con {
+   height:195px;
+}
+
+#contact-hero-heading-box {
+   align-self: end;
+}
+
+#contact-hero-text {
+   margin-top: 15px;
+   margin-bottom: 25px;
+}
+
+#contact-hero-address p {
+   margin-bottom: 20px;
+   font-size: 14px;
+   line-height: 22px;
+}
+
+#contact-hero-address {
+   margin-bottom: 30px;
+}
+
+#contact-hero-address h3 {
+   margin-bottom: 25px;
+}
+
+#contact-hero-form form {
+   display: flex;
+   flex-direction: column;
+}
+
+#contact-hero-form input, textarea {
+   padding: 22px;
+   border: 2px solid #d6d6d6;
+   background-color: #f7f7f7;
+   border-radius: 5px;
+   margin-bottom: 30px;
+   font: inherit;
+   width: 100%;
+}
+
+#contact-hero-form textarea {
+   height: 250px;
+}
+
+#contact-hero-form input[type="submit"] {
+   padding: 12px 28px;
+   background: #9a2018;
+   color: #fff;
+   border: none;
+   transition: all 200ms ease-in;
+   width: 150px;
+   align-self: flex-end;
+}
+
+#contact-hero-form input[type="submit"]:hover {
+   background-color: #626262;
+   border-radius: 0;
+}
+
+/* 8. ---Footer--- */
+
+#footer-hero {
+   background-image: url(../images/footer-mt.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+   background-position: center;
+   color: #fff;
+   font-size: 12px;
+   margin-top: 40px;
+   padding-bottom: 80px;
+}
+
+/*image switching for retina screens*/
+
+@media screen and (min-resolution: 200dpi),
+		screen and (min-resolution: 1.25dppx) {
+   #footer-hero {
+		background-image: url(../images/footer-mt@2x.jpg);
+	}		
+}
+
+#footer-hero h3 {
+   margin-top: 30px;
+   font-size: 28px;
+   margin-bottom: 16px;
+}
+
+#footer-privacy .line-seperator {
+   margin-top: 0px;
+}
+
+#footer-contact-info h3 {
+   font-size: 23px;
+}
+
+#footer-contact-info p {
+   margin-bottom: 20px;
+   line-height: 18px;
+   font-size: 11px;
+}
+
+#footer-nav, #footer-book-now {
+   display: none;
+}
+
+/* 9. ---Custom Size Media Queries--- */
+
+@media screen and (min-width: 500px) { 
+
+   #hero .grid-con {
+      height: 300px;
+   }
+
+   #why-choose-us-hero .grid-con {
+      height: 240px;
+   }
+
+   #about-hero .grid-con {
+      height: 240px;
+   }
+
+   #contact-hero .grid-con {
+      height: 240px;
+   }
+
+}
+
+ /* 10. ---Tablet Sized Screens--- */
+
+@media screen and (min-width: 768px) {
+
+   #stick-nav-con {
+      position: sticky;
+      background-color: #fff;
+      top: 0px;
+      border-bottom: solid 1px #c3c3c3;
+      z-index: 1; 
+      /* had to set z-index as css filters was causing images to overlap, see below */
+   }
+   
+   #logo {
+      margin-top: 32px;
+   }
+
+   #button {
+      display: none;
+   }
+   
+   #main-nav {
+      border-left: 2px solid #707070;
+      margin-top: 4%;
+      margin-bottom: 4%;
+      padding-left: 30px;
+   }
+
+   #burger-con {
+      display: block;
+      font-size: 12px;
+   }
+
+   #burger-con ul li, #burger-con ul li:first-child {
+      border: none;
+      display: inline;
+   }
+
+   #burger-con ul li {
+      margin-right: 10px;
+   }
+
+   #burger-con ul li:last-child {
+      margin-right: 0px;
+   }
+
+   #main-nav li a {
+      display: inline;
+   }
+
+   #book-now-header {
+      display: flex;
+   }
+
+   #book-now-hero {
+      display: none;
+   }
+
+   #booking-calendar {
+      display: block;
+      height: 200px;
+      background-color: #9a2018;
+      color: #fff;
+      padding: 30px 10px 20px 10px;
+      margin-top: 50px;
+   }
+
+   #booking-calendar h3 {
+      font-size: 12px;
+      margin-bottom: 10px;
+   }
+
+   #booking-calendar input[type="date"], #booking-calendar input[type="number"]  {
+      padding: 4px;
+      border: 2px solid #d6d6d6;
+      background-color: #f7f7f7;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font: inherit;
+      font-size: 12px;
+      width: 100%;
+   }
+
+   #booking-calendar input[type="submit"] {
+      padding: 12px 0 12px 0;
+      background: #CF6666;
+      color: #fff;
+      border: solid 2px #CF6666;
+      transition: all 100ms ease-in;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 12px;
+      margin-top: 20px;
+      text-align: center;
+   }
+
+   #booking-calendar input[type="submit"]:hover {
+      border: solid 2px #fff;
+      cursor: pointer;
+   }
+
+   #hero .grid-con {
+      height: 475px;
+   }
+
+   #hero {
+      background-image: url(../images/hero-main-td.jpg);
+   }
+   
+   /*image switching for retina screens*/
+   
+   @media screen and (min-resolution: 200dpi),
+         screen and (min-resolution: 1.25dppx) {
+      #hero{
+         background-image: url(../images/hero-main-td@2x.jpg);
+      }		  
+   }
+
+   #logo {
+      order: -1;
+   }
+
+   .hero-img-h2, .hero-img-h3 {
+      padding: 30px 15px;
+      font-size: 18px;
+   }
+   
+   .hero-img-h2 span,  .hero-img-h3 span {
+      font-size: 14px;
+   }
+
+   #contact {
+      line-height: 22px;
+      height: 214px;
+      padding-top: 60px;
+      font-size: 11px;
+   }
+
+   #contact .grid-con > div {
+      width: auto;
+      margin: 0;
+   }
+
+   .fas {
+      font-size: 60px;
+   }
+
+   #why-choose-us-nav {
+      margin-bottom: 30px;
+      margin-top: 30px;
+   }
+
+   #why-choose-us-nav ul li {
+      display: inline;
+      margin-right: 30px;
+   }
+
+   #why-choose-us-nav ul li a.selected {
+      border-left: none;
+      border-bottom: 5px solid #9a2018;
+      padding-bottom: 25px;
+   }
+   
+   #why-choose-us-hero .grid-con {
+      height: 350px;
+   }
+
+   #why-choose-us-hero {
+      background-image: url(../images/why-choose-us-hero-td.jpg);
+   }
+   
+   /*image switching for retina screens*/
+   
+   @media screen and (min-resolution: 200dpi),
+         screen and (min-resolution: 1.25dppx) {
+      #why-choose-us-hero {
+         background-image: url(../images/why-choose-us-hero-td@2x.jpg);
+      }		 
+   }
+
+   .why-choose-us-image {
+      float: none;
+      margin-right: 0px;
+      margin-top: 0px;
+      position: relative;
+   }
+
+   .why-choose-us-image span{
+      display: block;
+      position: absolute;
+      bottom: 30px;
+      right: 0px;
+      color: #fff;
+      font-size: 88px;
+   }
+
+   .why-choose-us-image-con h2 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 10px;
+   }
+
+   .why-choose-us-image-con h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+   }
+
+   .why-choose-us-image img {
+      filter: grayscale(100%);
+      z-index: -1;
+      /* set z-index lower so images don't overlap the nav
+      applying filters affects the browser painting order */
+      display: block;
+      /* the images were not fully filling the grid boxes, until I set them to block */
+   }
+
+   .why-choose-us-image-con {
+      margin-bottom: 30px;
+   }
+
+   #hot-tub p, #hot-tub a, #hot-tub h2 {
+      display: none;
+   }
+
+   #spa {
+      background-color: #626262;
+      color: #fff;
+      padding: 20px;
+   }
+
+   #spa p {
+      /* not supported in all browsers */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;  
+      text-overflow: ellipsis;
+      overflow: hidden;
+   }
+
+   #spa a {
+      color: #fff;
+      padding-bottom: 5px;
+   }
+
+   #spa a:hover {
+      border-bottom: solid 3px #9a2018;
+   }
+
+   #why-choose-us-bottom-nav {
+      display: none;
+   }
+
+   #why-choose-us {
+      margin-bottom: 80px;
+   }
+
+   .show-hide {
+      display: block;
+   }
+   
+   #about-hero .grid-con {
+      height: 300px;
+   }
+
+   #about-hero {
+      background-image: url(../images/about-us-hero-td.jpg);
+      background-position: right;
+   }
+   
+   /*image switching for retina screens*/
+   
+   @media screen and (min-resolution: 200dpi),
+         screen and (min-resolution: 1.25dppx) {
+       #about-hero {
+         background-image: url(../images/about-us-hero-td@2x.jpg);
+      }		  
+   }
+
+   #about-us-text {
+      column-count: 2;
+   }
+
+   #about-us-text-column1 {
+      margin-bottom: 80px;
+   }
+
+   #contact-hero {
+      background-image: url(../images/contact-hero-td.jpg);
+   }
+   
+   /*image switching for retina screens*/
+   
+   @media screen and (min-resolution: 200dpi),
+         screen and (min-resolution: 1.25dppx) {
+      #contact-hero {
+         background-image: url(../images/contact-hero-td@2x.jpg);
+      }		  
+   }
+
+   #contact-hero-text {
+      padding-top: 50px;
+      margin-top: 20px;
+   }
+
+   #faq-text-con  {
+      column-count: 2;
+      text-align: left;
+   }
+
+   #footer-nav {
+      display: block;
+   }
+
+   #footer-book-now {
+      display: flex;
+      height: 80px;
+      margin-top: 40px;
+   }
+
+   #footer-hero {
+      background-image: url(../images/footer-td.jpg);
+   }
+   
+   /*image switching for retina screens*/
+   
+   @media screen and (min-resolution: 200dpi),
+         screen and (min-resolution: 1.25dppx) {
+      #footer-hero {
+         background-image: url(../images/footer-td@2x.jpg);
+      }		  
+   }
+
+   #footer-nav {
+      margin-top: 40px;
+      column-count: 2;
+   }
+
+   #footer-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   #footer-nav ul li a {
+      color: #fff;
+   }
+
+   #footer-nav ul li {
+      margin-bottom: 20px;
+   }   
+}
+
+ /* 11. ---Desktop Sized Screens--- */
+
+@media screen and (min-width: 1200px) {
+
+   #main-header {
+      height: 110px;
+   }
+
+   #main-nav {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 25px;
+   }
+
+   #burger-con ul li {
+      margin-right: 25px;
+   }
+
+   #burger-con {
+      font-size: 16px;
+      margin-top: 28px;
+   }
+
+   .book-now {
+      font-size: 18px;
+   }
+
+   #booking-calendar {
+      height: 234px;
+   }
+
+   #check-availability {
+      margin-top: 10px;
+   }
+
+   #hero .grid-con {
+      height: 455px;
+   }
+
+   .hero-img-h2, .hero-img-h3 {
+      font-size: 24px;
+   }
+
+   .hero-img-h2 span, .hero-img-h3 span {
+      font-size: 16px;
+   }
+
+   .fas {
+      font-size: 90px;
+   }
+
+   .fa-mobile-alt {
+      margin-right: 40px;
+   }
+
+   .fa-map-marker-alt {
+      margin-right: 40px;
+   }
+
+   #why-choose-us-hero .grid-con {
+      height: 380px;
+   }
+
+   #spa p {
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      text-overflow: unset;
+      overflow: auto;
+   }
+
+   #why-choose-us-nav {
+      margin-top: 50px;
+      font-size: 24px;
+   }
+
+   #about-hero .grid-con {
+      height: 380px;
+   }
+
+   #contact-hero .grid-con {
+      height: 380px;
+   }
+}

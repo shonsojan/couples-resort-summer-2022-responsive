@@ -2,121 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
     <link href="css/grid.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <!-- convert all px units to rems, can show how site nicely scales when user adjusts browser font size
-    it's a small usability bonus, plus we can globally control scaling if we want by adjust html font-size value -->
-    <!-- <link href="css/grid-rem.css" rel="stylesheet" type="text/css">
-    <link href="css/main-rem.css" rel="stylesheet" type="text/css"> -->
     <title>Welcome to The Couples Resort</title>
 </head>
     <body>
         <h1 class="hidden">Welcome to The Couples Resort</h1>
-        <!-- Main Nav -->
-        <div id="stick-nav-con">          
+        <!-- Main Nav -->         
             <header class="grid-con" id="main-header">
-                <nav id="main-nav" class="col-span-full m-col-start-4 m-col-span-7">
+                <nav id="main-nav" class="col-span-full">
                     <h2 class="hidden">Main Navigation</h2>
-                    <button id="button"></button>
+                    <input type="checkbox" id="hamburger">
+                    <label for="hamburger">
+                    <img src="images/burger.svg" alt="hamburger menu icon">
+                    </label>
                     <div id="burger-con">
-                        <ul id="burger-menu">
-                            <li><a class="active" href="index.html">Home</a></li>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="#">Rooms</a></li>
                             <li><a href="#">Packages</a></li>
-                            <li><a href="#">Dining</a></li>
-                            <li><a href="#">Spa Activities</a></li>
+                            <li><a href="dining.html">Dining</a></li>
+                            <li><a href="spa.html">Spa Activites</a></li>
                             <li><a href="#">Reservations</a></li>
                         </ul>
                     </div>
                 </nav>
-                <div id="logo" class="col-span-full m-col-start-1 m-col-span-3">
+                <div id="logo" class="col-span-full">
                     <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo">
                 </div>
-                <div id="book-now-header" class="m-col-span-2 book-now">
-                    <p>Book Now</p>
-                </div>
             </header>        
-        </div>
         <!-- Main Hero -->
-        <section id="hero" class="full-width-grid-con">
-            <h2 class="hidden">Book a stay with us</h2>            
-            <img
-            sizes="100vw"
-            srcset="
-            images/hero-main_primqi_c_scale,w_320.jpg 320w,
-            images/hero-main_primqi_c_scale,w_1178.jpg 1178w,
-            images/hero-main_primqi_c_scale,w_2028.jpg 2028w,
-            images/hero-main_primqi_c_scale,w_2022.jpg 2022w,
-            images/hero-main_primqi_c_scale,w_2404.jpg 2404w,
-            images/hero-main_primqi_c_scale,w_2731.jpg 2731w,
-            images/hero-main_primqi_c_scale,w_3022.jpg 3022w,
-            images/hero-main_primqi_c_scale,w_3306.jpg 3306w,
-            images/hero-main_primqi_c_scale,w_3559.jpg 3559w,
-            images/hero-main_primqi_c_scale,w_3814.jpg 3814w,
-            images/hero-main_primqi_c_scale,w_3840.jpg 3840w"
-            src="images/hero-main_primqi_c_scale,w_3840.jpg"
-            alt="lakeside resort" id="hero-main">
-
-                <div class="grid-con">
-                    <div id="book-now-hero" class="book-now col-start-3 col-span-2">
-                        <p>Book Now</p>
-                    </div>
-                    <div id="booking-calendar" class="col-start-2 col-span-4 l-col-start-2 l-col-span-3">
-                        <form id="check-availability">
-                            <h3>Check Availability</h3>
-                            <input type="date" id="booking-cal" name="booking-cal">
-                            <input type="number" id="quantity" name="quantity" min="1" max="7" placeholder="Number of Romantic Evenings">
-                            <input type="submit" value="Let's Create Something Special">
-                        </form>
-                    </div>
-                    <section id="hero-heading-box" class="col-span-full m-col-start-2 m-col-span-6 l-start-2 l-col-end-7">
-                        <h2 class="hero-img-h2">
-                            <span>Couples Resort</span><br> 5 Star, Luxury Couples Resort &amp; Spa
-                        </h2>
-                    </section>
-                </div>
+        <section id="hero" class="grid-con">
+            <h2 class="hidden">Book a stay with us</h2>                       
+            <div id="book-now-hero" class="book-now col-start-3 col-span-2">
+                <p>Book Now</p>
+            </div>
+            <section id="hero-heading-box" class="col-span-full">
+                <h2 class="hero-img-h2">
+                    <span>Couples Resort</span><br> 5 Star, Luxury Couples Resort &amp; Spa
+                </h2>
+            </section>
         </section>
            
         <div class="grid-con">
-            <section id="hero-summary" class="col-span-full m-col-start-2 m-col-end-12 line-seperator">
+            <section id="hero-summary" class="col-span-full line-separator">
                 <h2 class="hidden">Summary of our Facilities</h2>
                 <p>Welcome to Couples Resort, Soyers Lake.  Haliburton's Only 5 STAR Luxury Resort.  Fine Luxury while still being Rustic with Wilderness.  A Boutique Luxury Resort with Junior suite rooms and cottages that are each designed uniquely, just for the 2 of you, varying between Opulent Old European to Natural Hailburton Style.  Come and experience very spacious accommodations, each and all, with Jacuzzi's, Wood Burning Fireplaces, Hot Tubs and so much more. </p> 
                 <p>"For over 50 years we have been committed to helping couples stay connected. 100% Canadian Owned, By the LeBlanc Family since 1958."</p>
             </section>
         </div>
             
-        <section id="contact">
-            <h2 class="hidden">Contact Us</h2>
-                <section class="grid-con">
-                    <h3 class="hidden">Phone, Fax and Email</h3>
-                    <div class="col-span-full m-col-start-3 m-col-end-7">
-                        <i class="fas fa-mobile-alt"></i>
-                        <p id="hero-numbers">
-                            Toll Free:+1 866 202-1179<br>
-                            Fax:+1 613 637 2615<br>
-                            info[at]coupleresort.com
-                            <!-- discuss email obfuscation  -->
-                        </p>   
-                    </div>
-                    <div class="col-span-full m-col-start-7 m-col-end-11">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p id="hero-address">
-                            139 Galeairy Lake Rd,(End of)<br>
-                            Whitney - Algonquin Park, On,<br>
-                            K0J 2M0. 
-                        </p>   
-                    </div>
-                </section>
+        <section id="contact" class="grid-con">
+            <h2 class="hidden">Contact Us</h2>              
+            <div class="col-start-2 col-span-2">
+                <i class="fas fa-mobile-alt"></i>
+                <p id="hero-numbers">
+                    Toll Free:+1 866 202-1179<br>
+                    Fax:+1 613 637 2615<br>
+                    info[at]coupleresort.com
+                    <!-- discuss email obfuscation  -->
+                </p>   
+            </div>
+            <div class="col-start-2 col-span-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <p id="hero-address">
+                    1198 Osprey Rd, (End of)<br>
+                    Minden, Soyers Lake, ON<br>
+                    K0M 2K0
+                </p>   
+            </div>
         </section>
          <!-- Why Choose Us -->
         <div id="why-choose-us">  
             <div class="grid-con">
-                <nav id="why-choose-us-nav" class="col-span-full m-col-start-2 m-col-span-10">
+                <nav id="why-choose-us-nav" class="col-span-full">
                     <h2 class="hidden">Nav for why choose us</h2>
                     <ul>
                         <li><a class="selected" href="#">Why Choose Couples Resort</a></li>
@@ -127,48 +90,17 @@
                 </nav>
             </div>
             
-            <section id="why-choose-us-hero-con" class="full-width-grid-con">             
-                <img
-                sizes="100vw"
-                srcset="
-                images/why-choose-us-hero_gdnwtu_c_scale,w_320.png 320w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_1149.png 1149w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_1717.png 1717w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_2116.png 2116w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_2476.png 2476w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_2812.png 2812w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_3103.png 3103w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_3363.png 3363w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_3630.png 3630w,
-                images/why-choose-us-hero_gdnwtu_c_scale,w_3840.png 3840w"
-                src="images/why-choose-us-hero_gdnwtu_c_scale,w_3840.png"
-                alt="couple lovingly gazing at each other" id="why-choose-us-hero">
-                <div class="grid-con">
-                    <div id="why-choose-us-heading-box" class="col-span-full m-col-start-6 m-col-end-12 l-col-start-7 l-col-end-12">
-                        <h3 class="hero-img-h3"><span>Couples Resort</span><br> Why Choose Us...</h3>
-                    </div>
-                </div>
+            <section id="why-choose-us-hero-con" class="grid-con">             
+                <div id="why-choose-us-heading-box" class="col-span-full">
+                    <h3 class="hero-img-h3"><span>Couples Resort</span><br> Why Choose Us...</h3>
+                </div> 
             </section>
            
             <div class="grid-con">
-                <div class="col-span-full m-col-start-2 m-col-end-12 line-seperator"></div>
-                <div class="col-span-full m-col-span-4 why-choose-us-image-con" id="hot-tub">
+                <div class="col-span-full line-separator"></div>
+                <div class="col-span-full why-choose-us-image-con" id="hot-tub">
                     <div class="why-choose-us-image">
-                        <!-- For these images I used https://responsivebreakpoints.com/
-                        I export the image from XD at it's largest size x4 quality to 
-                        maintain aspect ratio, then let the site do sizing and compression -->
-                        <img
-                            sizes="(min-width: 768px) 100vw, 
-                                    40vw"
-                            srcset="
-                            images/spa_lglnnx_c_scale,w_130.jpg 130w,
-                            images/spa_lglnnx_c_scale,w_503.jpg 503w,
-                            images/spa_lglnnx_c_scale,w_740.jpg 740w"
-                            src="images/spa_lglnnx_c_scale,w_740.jpg"
-                            alt="couple in hot tub">
-                            <!-- essentially what sizes says, is the defaulth width of this image
-                            is 40vw, however once we reach 768 and above make it 100vw -->
-                            <span>1</span>
+                        <img src="images/spa.jpg" alt="couple in hot tub">
                     </div>
                     <h2>Haliburton Spa at Couples Resort</h2>  
                     <p>Escape and rejuvenate yourself and your loved one with a spa vacation. Restore your balance and find energy with one of our Spa Packages for two. Visit the packages page for details on Spa Specials.  Begin your journey to soothe by taking a spa vacation today. </p> 
@@ -176,73 +108,6 @@
                     <a href="#">CLICK TO LEARN MORE...</a>                   
                 </div>
 
-                <div class="show-hide col-span-full m-col-span-4 why-choose-us-image-con">
-                    <div class="why-choose-us-image">
-                        <img
-                            sizes="(min-width: 768px) 100vw, 40vw"
-                            srcset="
-                            images/fire-side_o37y9k_c_scale,w_130.jpg 130w,
-                            images/fire-side_o37y9k_c_scale,w_521.jpg 521w,
-                            images/fire-side_o37y9k_c_scale,w_659.jpg 659w,
-                            images/fire-side_o37y9k_c_scale,w_740.jpg 740w"
-                            src="images/fire-side_o37y9k_c_scale,w_740.jpg"
-                            alt="Sit Fire-Side">
-                            <span>2</span>
-                    </div>                                             
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4 why-choose-us-image-con">
-                    <div class="why-choose-us-image">
-                        <img
-                            sizes="(min-width: 768px) 100vw, 40vw"
-                            srcset="
-                            images/indulge-pastries_bhuxop_c_scale,w_130.jpg 130w,
-                            images/indulge-pastries_bhuxop_c_scale,w_476.jpg 476w,
-                            images/indulge-pastries_bhuxop_c_scale,w_698.jpg 698w,
-                            images/indulge-pastries_bhuxop_c_scale,w_740.jpg 740w"
-                            src="images/indulge-pastries_bhuxop_c_scale,w_740.jpg"
-                            alt="Delicious pastries on a plate">
-                            <span>3</span>
-                    </div>                                           
-                </div>
-                
-                <div class="show-hide col-span-full m-col-span-4 why-choose-us-image-con">
-                    <div class="why-choose-us-image">
-                        <img
-                            sizes="(min-width: 768px) 100vw, 40vw"
-                            srcset="
-                            images/horse-back_xotbde_c_scale,w_130.jpg 130w,
-                            images/horse-back_xotbde_c_scale,w_518.jpg 518w,
-                            images/horse-back_xotbde_c_scale,w_712.jpg 712w,
-                            images/horse-back_xotbde_c_scale,w_740.jpg 740w"
-                            src="images/horse-back_xotbde_c_scale,w_740.jpg"
-                            alt="female couple horseback riding">
-                            <span>4</span>
-                    </div>                                               
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4 why-choose-us-image-con" id="spa">
-                    <div class="why-choose-us-image"></div>
-                    <h2>The SPA</h2>
-                    <h3>Haliburton Spa at Couples Resort</h3>  
-                    <p>Escape and rejuvenate yourself and your loved one with a spa vacation. Restore your balance and find energy with one of our Spa Packages for two. Visit the packages page for details on Spa Specials.  Begin your journey to soothe by taking a spa vacation today. </p>    
-                    <a href="#">CLICK TO LEARN MORE...</a> 
-                </div>
-
-                <div class="show-hide col-span-full m-col-span-4 why-choose-us-image-con">
-                    <div class="why-choose-us-image">
-                        <img
-                            sizes="(min-width: 768px) 100vw, 40vw"
-                            srcset="
-                            images/facilities_qz3nsl_c_scale,w_130.jpg 130w,
-                            images/facilities_qz3nsl_c_scale,w_693.jpg 693w,
-                            images/facilities_qz3nsl_c_scale,w_740.jpg 740w"
-                            src="images/facilities_qz3nsl_c_scale,w_740.jpg"
-                            alt="tables by the lake">
-                            <span>6</span>
-                    </div>
-                </div>
-                                        
                 <nav class="col-span-full" id="why-choose-us-bottom-nav">
                     <h2 class="hidden">Why us bottom nav</h2>
                     <ol>
@@ -258,28 +123,14 @@
         </div>
 
         <div id="about-con">
-            <div id="about-hero-con" class="full-width-grid-con">                
-                <img
-                sizes="100vw"
-                srcset="
-                images/about-us-hero_ijynhk_c_scale,w_320.png 320w,
-                images/about-us-hero_ijynhk_c_scale,w_2047.png 2047w,
-                images/about-us-hero_ijynhk_c_scale,w_3017.png 3017w,
-                images/about-us-hero_ijynhk_c_scale,w_3633.png 3633w,
-                images/about-us-hero_ijynhk_c_scale,w_3676.png 3676w,
-                images/about-us-hero_ijynhk_c_scale,w_3836.png 3836w,
-                images/about-us-hero_ijynhk_c_scale,w_3840.png 3840w"
-                src="images/about-us-hero_ijynhk_c_scale,w_3840.png"
-                alt="row boats parked at a dock" id="about-hero">      
-                <section class="grid-con">
-                    <div id="about-hero-heading-box" class="col-span-full m-col-start-2 m-col-span-6 l-col-start-2 l-col-end-7">
-                        <h2 class="hero-img-h2"><span>About Couples Resort</span><br> Haliburton - Soyers Lake</h2>
-                    </div>
-                </section>
+            <div id="about-hero-con" class="grid-con">                
+                <div id="about-hero-heading-box" class="col-span-full">
+                    <h2 class="hero-img-h2"><span>About Couples Resort</span><br> Haliburton - Soyers Lake</h2>
+                </div>           
             </div>
             
             <div class="grid-con">
-                <div id="about-us-text" class="col-span-full m-col-start-2 m-col-end-12 line-seperator">
+                <div id="about-us-text" class="col-span-full line-separator">
                     <article id="about-us-text-column1">
                         <h2 class="hidden">Soyers Lake</h2>
                     <p>Ontario's Couples Resort is on the shores of Haliburton's Soyers Lake, which is part of the Kashagawigamog Lake system. The village Minden, Ontario is a short 15-minute walk away. We are surrounded with breathtaking wilderness, pure fresh air, secluded forests, pristine waters, an abundance of sunny days and a blanket of stars at night.</p>
@@ -300,21 +151,20 @@
             
         </div>
 
-        <div id="faq-con">
-            <section class="grid-con faq">
-                <div class="col-span-full m-col-start-2 m-col-end-12 ">
+        <div id="faq-con" class="grid-con">
+                <div class="col-span-full">
                     <h2><span>Couples Resort</span><br>FAQ</h2>
                 </div>
-                <section class="col-span-full m-col-start-2 m-col-end-12 faq-items line-seperator">
+                <section class="col-span-full faq-items line-separator">
                     <h3>Check-in/Check-out</h3>
                 </section>
-                <section class="col-span-full m-col-start-2 m-col-end-12 faq-items">
+                <section class="col-span-full faq-items">
                     <h3>All-Inclusive</h3>
                 </section>
-                <section class="col-span-full m-col-start-2 m-col-end-12 faq-items">
+                <section class="col-span-full faq-items">
                     <h3>Dining Hours &amp; Dress Code</h3>
                 </section>
-                <section class="col-span-full m-col-start-2 m-col-end-12 faq-items">
+                <section class="col-span-full faq-items">
                     <h3>Amenities In-room</h3>
                     <div id="faq-text-con">
                         <div id="faq-list-group1">
@@ -338,42 +188,23 @@
                     </div>
                 </section>
 
-                <section class="col-span-full m-col-start-2 m-col-end-12 faq-items">
-                    <h3>Where Are The Moose?</h3>
-                </section>
-                
-            </section>
+      
         </div>
 
         
-        <div id="contact-hero-con" class="full-width-grid-con">
-            <img
-                    sizes="100vw"
-                    srcset="
-                    images/contact-hero_zujj5l_c_scale,w_320.png 320w,
-                    images/contact-hero_zujj5l_c_scale,w_1805.png 1805w,
-                    images/contact-hero_zujj5l_c_scale,w_2603.png 2603w,
-                    images/contact-hero_zujj5l_c_scale,w_3174.png 3174w,
-                    images/contact-hero_zujj5l_c_scale,w_3630.png 3630w,
-                    images/contact-hero_zujj5l_c_scale,w_3825.png 3825w,
-                    images/contact-hero_zujj5l_c_scale,w_3838.png 3838w,
-                    images/contact-hero_zujj5l_c_scale,w_3840.png 3840w"
-                    src="images/contact-hero_zujj5l_c_scale,w_3840.png"
-                    alt="couple embracing while viweing a mountain" id="contact-hero">
-            <section class="grid-con">                  
-                <div id="contact-hero-heading-box" class="col-span-full m-col-start-6 m-col-end-12 l-col-start-7 l-col-end-12 ">
-                    <h2 class="hero-img-h2"><span>Couples Resort</span><br> Contact</h2>
-                </div>
-            </section>
-        </div>
+        <section id="contact-hero-con" class="grid-con">
+            <div id="contact-hero-heading-box" class="col-span-full">
+                <h2 class="hero-img-h2"><span>Couples Resort</span><br> Contact</h2>
+            </div>
+        </section>
 
             
         <section class="grid-con">
             <h2 class="hidden">Contact Information</h2>
-            <div id="contact-hero-text" class="line-seperator col-span-full m-col-start-2 m-col-end-12">
+            <div id="contact-hero-text" class="line-separator col-span-full">
                 <p>Thank you for taking the time to learn more about our resort and why we are Ontario's number one choice for couples looking to reconnect. For reservation enquiries and further information, please complete our contact form below. Or if you prefer to talked call us at our toll free number listed below.</p>
             </div>
-            <div id="contact-hero-address" class="col-span-full m-col-start-2 m-col-end-6">          
+            <div id="contact-hero-address" class="col-span-full">          
                 <h3>Couples Resort (Inc.)</h3>
                 <p>1198 Osprey Rd, (End of)<br>
                 Minden, Soyers Lake, ON, <br>K0M 2K0</p>
@@ -382,9 +213,11 @@
                     FAX:+1 613 638 2217<br>
                     E-mail: info[at]coupleresort.com </p>         
             </div>
-            <div id="contact-hero-form" class="col-span-full m-col-start-6 m-col-end-12">
-                <form action="email.php" method="POST" enctype="text/plain">
-                    <input name="fullName" type="text" placeholder="First & Last Name">
+            <div id="contact-hero-form" class="col-span-full">
+
+
+                <form action="#" method="post" enctype="text/plain">
+                    <input name="fullName" type="text" required placeholder="First & Last Name">
                     <input name="contactInfo" type="text" required placeholder="Phone number or Email">
                     <textarea name="msg" placeholder="Enter your questions, comments or concerns here..."></textarea>
                     <input name="submit" type="submit" value="Send">
@@ -392,9 +225,8 @@
             </div>
         </section>
             
-        <footer id="footer-hero">
-            <div class="grid-con">
-                <section id="footer-contact-info" class="col-span-full m-col-start-2 m-col-end-5">
+        <footer id="footer-hero" class="grid-con">        
+                <section id="footer-contact-info" class="col-span-full">
                     <h3>Couples Resort</h3>
                     <p>1198 Osprey Rd, (End of)<br>
                         Minden, Soyers Lake, ON, <br>
@@ -406,25 +238,11 @@
                         E-mail: info@coupleresort.com
                     </p>
                 </section>
-                <nav id="footer-nav" class="col-span-full m-col-start-6 m-col-end-9 l-col-start-5 l-col-end-8">
-                    <h2 class="hidden">Footer Nav</h2>
-                    <ul>
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="#">Rooms</a></li>
-                        <li><a href="#">Packages</a></li>
-                        <li><a href="#">Dining</a></li>
-                        <li><a href="#">Spa Activities</a></li>
-                        <li><a href="#">Reservations</a></li>
-                    </ul>
-                </nav>
-                <div id="footer-book-now" class="col-span-full m-col-start-10 m-col-end-13 l-col-start-9 l-col-end-12 book-now">
-                    <p>Book Now</p>
-                </div>
-                <div id="footer-privacy" class="col-span-full m-col-start-2 m-col-end-12 line-seperator">
+                <div id="footer-privacy" class="col-span-full line-separator">
                     <p id="price-policy">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing. ©2013 Couples Resort Inc. All Rights Reserved. Privacy Policy </p>
                 </div>
-            </div>
         </footer>
+
         <script src="js/main.js"></script>   
     </body>
 </html>
